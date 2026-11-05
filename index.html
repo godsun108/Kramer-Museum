@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#18251e">
+<meta name="description" content="Kramer Museum — a living collection of life, ideas, creativity, Earth restoration, and exploration.">
+<title>Kramer Museum — A Living Collection</title>
+<style>
+:root{--ink:#202820;--muted:#667064;--paper:#f4f1e8;--cream:#e9e3d5;--green:#263b30;--green2:#405b48;--gold:#b28a50;--line:rgba(38,59,48,.18);--serif:Georgia,'Times New Roman',serif;--sans:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}a{color:inherit}button{font:inherit}.skip{position:absolute;left:-9999px;top:auto}.skip:focus{left:1rem;top:1rem;background:white;padding:.7rem;z-index:10}
+header{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:1.2rem clamp(1.2rem,5vw,5rem);color:#fff;border-bottom:1px solid rgba(255,255,255,.2)}.brand{font-family:var(--serif);font-size:1.25rem;letter-spacing:.08em;text-decoration:none}.nav{display:flex;gap:1.4rem;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase}.nav a{text-decoration:none;color:rgba(255,255,255,.85)}.nav a:hover{color:#fff}
+.hero{min-height:88svh;display:flex;align-items:flex-end;padding:9rem clamp(1.2rem,9vw,9rem) 7rem;color:#fff;background:linear-gradient(90deg,rgba(13,25,18,.84),rgba(13,25,18,.42) 58%,rgba(13,25,18,.15)),linear-gradient(0deg,rgba(12,20,15,.35),transparent 60%),url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=2200&q=85') center/cover}
+.hero-inner{max-width:850px}.eyebrow{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:650}.hero h1{font:normal clamp(3.7rem,10vw,8.8rem)/.94 var(--serif);letter-spacing:-.045em;margin:1.1rem 0 1.5rem}.hero p{max-width:580px;font:normal clamp(1.1rem,2vw,1.45rem)/1.6 var(--serif);color:rgba(255,255,255,.88)}.hero-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}.button{display:inline-block;padding:.85rem 1.2rem;border:1px solid rgba(255,255,255,.6);text-decoration:none;text-transform:uppercase;letter-spacing:.13em;font-size:.7rem}.button.primary{background:var(--paper);color:var(--green);border-color:var(--paper)}
+main{overflow:hidden}.intro{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;padding:clamp(4rem,9vw,8rem) clamp(1.3rem,10vw,10rem);background:var(--paper)}.intro h2,.section-heading h2{font:normal clamp(2.4rem,5vw,4.5rem)/1.05 var(--serif);letter-spacing:-.035em;margin:.5rem 0}.intro-copy{max-width:650px;font:normal clamp(1.1rem,1.7vw,1.35rem)/1.8 var(--serif);color:#4e584d}
+.section{padding:clamp(4rem,8vw,7rem) clamp(1.3rem,8vw,8rem)}.section.dark{background:var(--green);color:var(--paper)}.section.dark .muted{color:#c3cabc}.section-heading{max-width:760px;margin-bottom:3rem}.section-heading p{max-width:650px;color:var(--muted)}.section.dark .section-heading p{color:#c3cabc}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.exhibit{background:var(--paper);padding:2rem;min-height:270px;display:flex;flex-direction:column;justify-content:space-between}.exhibit .number{font:normal 1rem var(--serif);color:var(--gold)}.exhibit h3{font:normal 1.8rem/1.1 var(--serif);margin:1.3rem 0 .7rem}.exhibit p{font-size:.92rem;color:var(--muted);margin:0}.exhibit a{margin-top:1.5rem;text-decoration:none;font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--green2)}.exhibit a:hover{text-decoration:underline}
+.feature{display:grid;grid-template-columns:1fr 1fr;min-height:520px}.feature-image{background:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=85') center/cover;min-height:360px}.feature-copy{background:var(--cream);padding:clamp(2rem,6vw,5.5rem);display:flex;flex-direction:column;justify-content:center}.feature-copy h2{font:normal clamp(2.5rem,5vw,4.6rem)/1.02 var(--serif);margin:.8rem 0 1.2rem}.feature-copy p{max-width:560px;color:#566052}.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2.2rem}.pillar{border-top:1px solid var(--line);padding-top:1rem}.pillar h3{font:normal 1.6rem var(--serif);margin:.4rem 0}.pillar ul{padding-left:1.1rem;color:#566052;font-size:.9rem}
+.story-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}.story{border-top:1px solid rgba(255,255,255,.28);padding:1.4rem 0}.story h3{font:normal 1.8rem var(--serif);margin:.3rem 0}.story p{color:#c3cabc;max-width:570px}.tag{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.values{display:grid;grid-template-columns:.8fr 1.2fr;gap:4rem;align-items:start}.values blockquote{margin:0;font:normal clamp(2.4rem,5vw,4.6rem)/1.08 var(--serif);letter-spacing:-.03em}.values p{max-width:650px;color:var(--muted)}
+footer{background:#18251e;color:#e9e3d5;padding:3rem clamp(1.3rem,8vw,8rem);display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}footer .foot-title{font:normal 2rem var(--serif)}footer p{color:#bfc7bb;font-size:.85rem;max-width:430px}footer a{color:#e9e3d5}
+.note{font-size:.78rem;color:var(--muted);border-left:2px solid var(--gold);padding-left:1rem;margin-top:2rem}.dark .note{color:#c3cabc}
+@media(max-width:760px){header{align-items:flex-start}.nav{gap:.7rem;flex-wrap:wrap;justify-content:flex-end;max-width:58%;font-size:.61rem}.hero{min-height:82svh;padding-bottom:4.5rem;background-position:58% center}.intro,.values,.feature{grid-template-columns:1fr;gap:1.5rem}.gallery{grid-template-columns:1fr}.exhibit{min-height:220px}.story-grid{grid-template-columns:1fr}.feature-image{min-height:280px;order:0}.feature-copy{order:1}.pillars{grid-template-columns:1fr}.section{padding-top:4rem;padding-bottom:4rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<a class="brand" href="#top">KRAMER MUSEUM</a>
+<nav class="nav" aria-label="Main navigation">
+<a href="#collection">Collection</a><a href="#earth">Earth & Response</a><a href="#stories">Stories</a><a href="#vision">Vision</a>
+</nav>
+</header>
+<section class="hero" id="top" aria-labelledby="hero-title">
+<div class="hero-inner">
+<div class="eyebrow">A living collection · Always becoming</div>
+<h1 id="hero-title">Kramer<br>Museum</h1>
+<p>An exploration of one life — its music, journeys, questions, friendships, ideas, and hopes for a thriving Earth.</p>
+<div class="hero-actions"><a class="button primary" href="#collection">Enter the collection</a><a class="button" href="#earth">Explore the mission</a></div>
+</div>
+</section>
+<main id="main">
+<section class="intro">
+<div><div class="eyebrow">The invitation</div><h2>Not a monument.<br>A work in progress.</h2></div>
+<div class="intro-copy">A museum can hold more than objects. It can hold the places that shape us, the music that moves us, the people and animals who become family, the work we try, and the questions we keep carrying. This is a growing collection — part archive, part reflection, and part open door. It will change as life continues.</div>
+</section>
+<section class="section" id="collection">
+<div class="section-heading"><div class="eyebrow">The permanent collection</div><h2>Rooms of a life</h2><p>Each room is a doorway into a different thread: sound, story, movement, discovery, and the natural world.</p></div>
+<div class="gallery">
+<article class="exhibit"><div><span class="number">01 / SOUND</span><h3>The Music Room</h3><p>Guitar, piano, horns, bass, drums, production, DJ culture, and the long-form journey of a five-rhythm set.</p></div><a href="#music">Visit the room ↗</a></article>
+<article class="exhibit"><div><span class="number">02 / THE INNER LIFE</span><h3>Books & Questions</h3><p>A reading shelf of spiritual texts, philosophy, and books that invite a closer look at being here.</p></div><a href="#books">Visit the room ↗</a></article>
+<article class="exhibit"><div><span class="number">03 / OUTSIDE</span><h3>Field Notes</h3><p>Fishing, surfing, camping, trails, travel, sport, and time spent paying attention to the living world.</p></div><a href="#field-notes">Visit the room ↗</a></article>
+<article class="exhibit"><div><span class="number">04 / COMPANIONS</span><h3>Zeke & the Van</h3><p>A memorable acquisition: the van came with a dog. Some stories introduce themselves.</p></div><a href="#zeke">Visit the story ↗</a></article>
+<article class="exhibit"><div><span class="number">05 / MAKING</span><h3>Ideas into Practice</h3><p>Creative work, ventures, experiments, and the lessons that come from building things in the world.</p></div><a href="#ventures">Visit the room ↗</a></article>
+<article class="exhibit"><div><span class="number">06 / SERVICE</span><h3>Church, Foundation & Nonprofit</h3><p>A dedicated home for spiritual community, charitable purpose, and work in service of people and planet.</p></div><a href="#organizations">Visit the room ↗</a></article>
+</div>
+</section>
+<section class="feature" id="earth">
+<div class="feature-image" role="img" aria-label="Sunlight filtering through a green forest"></div>
+<div class="feature-copy">
+<div class="eyebrow">The mission wing</div>
+<h2>Earth restoration.<br>Emergency response.</h2>
+<p><em>Restoring the living Earth. Supporting communities in times of need. Building resilience for generations to come.</em></p>
+<p>The aim is an international effort built around two connected responsibilities: helping ecosystems recover, and helping communities prepare for, withstand, and recover from emergencies.</p>
+<div class="pillars">
+<div class="pillar"><span class="tag">Pillar one</span><h3>Earth restoration</h3><ul><li>Reforestation and habitat renewal</li><li>Soil regeneration and biochar</li><li>Clean water and regenerative agriculture</li><li>Sustainable materials and local production</li></ul></div>
+<div class="pillar"><span class="tag">Pillar two</span><h3>Emergency response</h3><ul><li>Disaster relief and recovery</li><li>Food, water, shelter, and essential supplies</li><li>Coordination among local responders and partners</li><li>Field-team deployment and long-term rebuilding</li></ul></div>
+</div>
+<p class="note">This describes the mission and intended model, not a claim that international response teams, partnerships, funding, or deployments are already operational. Those milestones will be documented as they are established.</p>
+</div>
+</section>
+<section class="section dark" id="stories">
+<div class="section-heading"><div class="eyebrow">Travel journal & living history</div><h2>Stories still unfolding</h2><p>Some experiences deserve their own rooms. These are starting points for fuller stories, photographs, and firsthand recollections.</p></div>
+<div class="story-grid">
+<article class="story" id="zeke"><span class="tag">Companions</span><h3>The Dog Who Came With the Van</h3><p>Zeke entered the story with a van purchase — he came with the van. The details, photographs, and the rest of the tale belong here as the collection grows.</p></article>
+<article class="story"><span class="tag">Travel & service</span><h3>Ancestral Medicine Revival</h3><p>Travel and projects connected with Ancestral Medicine Revival and Tree of Life Church. This exhibit will preserve personal memories and distinguish firsthand experience from organizational history.</p></article>
+<article class="story" id="ventures"><span class="tag">Business & creativity</span><h3>Kakao Kode</h3><p>A venture the collection will explore through the user's own role, memories, collaborators, and lessons. More of the story will be added when those details are ready.</p></article>
+<article class="story"><span class="tag">Conservation</span><h3>Linda Tucker & white lion conservation</h3><p>A place to document the church's work connected with Linda Tucker and white lion conservation, with the organizations and the user's own involvement described precisely.</p></article>
+</div>
+</section>
+<section class="section" id="music">
+<div class="section-heading"><div class="eyebrow">Room 01 · Sound</div><h2>Music is a way of moving through the world</h2><p>The musical path began with guitar, then opened into piano through music theory, and continued through horns, bass, drums, and production software. DJing became another instrument: shaping a room over time.</p></div>
+<div class="values"><div><span class="tag">Five rhythms</span><h3 style="font:normal 2rem var(--serif)">A dance as a journey</h3></div><div><p>In the 5Rhythms tradition, the sequence — Flowing, Staccato, Chaos, Lyrical, Stillness — can become a complete arc. The user's sets were curated as roughly two-and-a-half-hour journeys, giving each rhythm room to unfold rather than treating the music as a simple playlist.</p><p>Artists in the listening orbit include Kanye West, Zeds Dead, and Drake. The collection will grow to include original productions, mixes, instruments, and recordings.</p></div></div>
+</section>
+<section class="section dark" id="books">
+<div class="section-heading"><div class="eyebrow">Room 02 · Books & questions</div><h2>A shelf of influences</h2><p>Books that have been named as meaningful parts of the reading landscape:</p></div>
+<div class="story-grid">
+<div class="story"><h3>The Bible</h3></div><div class="story"><h3>Be Here Now</h3></div><div class="story"><h3>Autobiography of a Yogi</h3></div><div class="story"><h3>Bhagavad Gita</h3></div><div class="story"><h3>It's Here Now (Are You?)</h3></div>
+</div>
+</section>
+<section class="section" id="field-notes">
+<div class="section-heading"><div class="eyebrow">Room 03 · Field notes</div><h2>Outside, wherever possible</h2><p>Fishing has been part of life since growing up. The outdoors collection also includes surfing, camping, walks in nature, and time with Zeke. Sport and movement have included baseball, football, wrestling, motocross, track and field, and debate.</p></div>
+<div class="values"><div><span class="tag">Places remembered</span><h3 style="font:normal 2rem var(--serif)">A map made of memories</h3></div><div><p>Manitou Springs and the Colorado mountains; Little and Big Cottonwood Canyons and Park City in Utah; Idaho; La Jolla; St. Augustine; Cairo; Athens; and Lincoln, Montana — a place name to confirm. These are personal touchstones, not a complete travel record.</p><p>Favorite meals named for the collection include bison burgers, salmon, and elk. Coffee, as currently documented: heavy whipping cream and about two tablespoons of agave.</p></div></div>
+</section>
+<section class="section dark" id="organizations">
+<div class="section-heading"><div class="eyebrow">Room 06 · Community & service</div><h2>People, purpose, and responsibility</h2><p>This wing is intentionally structured with editable names until the exact public names and details are confirmed.</p></div>
+<div class="story-grid">
+<article class="story"><span class="tag">Spiritual community</span><h3>[CHURCH NAME]</h3><p>Mission, history, community, gatherings, service, and the experiences the user chooses to share.</p></article>
+<article class="story"><span class="tag">Long-term vision</span><h3>[FOUNDATION NAME]</h3><p>Purpose, charitable initiatives, partnerships, projects, and future goals — with legal status and active programs described only when confirmed.</p></article>
+<article class="story"><span class="tag">Public benefit</span><h3>[NONPROFIT NAME]</h3><p>Programs, outreach, community impact, and ways to participate, added as they are established and verified.</p></article>
+<article class="story"><span class="tag">Guiding principle</span><h3>Just be nice.</h3><p>A simple value, and a good place to begin.</p></article>
+</div>
+</section>
+<section class="section" id="vision">
+<div class="values"><div><div class="eyebrow">The horizon</div><h2 style="font:normal clamp(2.5rem,5vw,4.5rem)/1.05 var(--serif)">A regenerative ecosystem</h2></div><div><p>A long-range ambition: connect regenerative agriculture and biomass with biochar, carbon and materials research, energy, and responsible manufacturing — including aspirations around hemp, sugar, gas, and steel.</p><p>The idea is not a collection of disconnected industries, but an integrated system in which materials, energy, land stewardship, and local production reinforce one another. Graphene-related capture concepts are part of the exploration. This is a vision under development, not a claim of existing industrial capacity.</p><p class="note">The museum is an evolving archive. New exhibits, verified details, photographs, and project milestones will be added over time.</p></div></div>
+</section>
+</main>
+<footer><div><div class="foot-title">Kramer Museum</div><p>A living collection of life, ideas, creativity, Earth restoration, and exploration.</p></div><div><p>Independent project · Public collection</p><p><a href="#top">Return to the entrance ↑</a></p><p>© <span id="year"></span> Kramer Museum</p></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
