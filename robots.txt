@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://godsun108.github.io/Kramer-Museum/sitemap.xml
